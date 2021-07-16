@@ -34,9 +34,9 @@ I don't think OpenMLN should (yet) focus on offering every concievable operation
         - &Psi;-Infomap
         - &Psi;-Leidel
         - &Psi;-Walktrap
-        - &Psi;-Degree
-        - &Psi;-Closeness
-        - &Psi;-Betweenness
+        - &Psi;-Degree: indegree/outdegree/ave degree of a vertex optionally normalized over all nodes
+        - &Psi;-Closeness: 
+        - &Psi;-Betweenness: number of unique paths through a vertex. 
         - &Psi;-Subdue (Substructure): how much this vertex resembles the verteces of the most frequently occuring substructure (not sure)
         - &Psi;-Single substructure: This node actually accepts two inputs: the layer and the substructure (which is a `Layer` object)
     - Other:
