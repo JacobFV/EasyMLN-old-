@@ -29,14 +29,17 @@ I don't think OpenMLN should (yet) focus on offering every concievable operation
         - &Theta;-Maximum Weight Perfect Match (MWPM)
         - &Theta;-MWM with Ties (MWMT)
         - &Theta;-Equivalence Metric: one of {Jaccard, Cosine, Euclidean, Haversine, Multi-range, Fixed-range} with parameters
-    - &Psi; functions:
+        - 
+    - &Psi; functions: (most of these functions can be optionally normalized by the vertex value sum or number of vertices)
         - &Psi;-Louvain
         - &Psi;-Infomap
         - &Psi;-Leidel
         - &Psi;-Walktrap
-        - &Psi;-Degree: indegree/outdegree/ave degree of a vertex optionally normalized over all nodes
+        - &Psi;-Degree: indegree/outdegree/ave degree of a vertex
         - &Psi;-Closeness: 
         - &Psi;-Betweenness: number of unique paths through a vertex. 
+        - &Psi;-Exponential: e^x optionally normalized over all vertex exponentials
+        - &Psi;-Group degree centrality: number of non-group vertices that are connected to a group of N vertices.
         - &Psi;-Subdue (Substructure): how much this vertex resembles the verteces of the most frequently occuring substructure (not sure)
         - &Psi;-Single substructure: This node actually accepts two inputs: the layer and the substructure (which is a `Layer` object)
     - Other:
@@ -61,7 +64,7 @@ I don't think OpenMLN should (yet) focus on offering every concievable operation
     - Script: any javascript function. The Script Node automatically reads the function signature and changes the node's input ports to match. 
         - list of this users' custom scripts
 
-It should be possible to express the functionality of every node using only a script node. I do not think we should enforce strong typing (we shouldn't raise an error when a read CSV output connects to a &Theta; function input; all values are just javascript objects). However, we could provide tpye-hints by coloring ports by their preferred type (eg: file = grey; table = pink; boolean/number = red, string = brown, date/time/duration = purple; layer = blue; interlayer edges = green).
+Users drag and drop nodes from a popdown menu onto the workspace. It should be possible to express the functionality of every node using only a script node. I do not think we should enforce strong typing (we shouldn't raise an error when a read CSV output connects to a &Theta; function input; all values are just javascript objects). However, we could provide tpye-hints by coloring ports by their preferred type (eg: file = grey; table = pink; boolean/number = red, string = brown, date/time/duration = purple; layer = blue; interlayer edges = green).
 
 ## Application Architecture
 
