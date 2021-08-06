@@ -1,4 +1,4 @@
-# ![](/docs/content/img/OpenMLN-Icon.png) OpenMLN
+# ![](/docs/content/img/OpenMLN-Icon.png) EasyMLN
 
 Generate, analyze, and research multilayer networks (MLN).
 
